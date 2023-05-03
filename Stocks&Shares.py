@@ -13,12 +13,12 @@ def find_stockvalue():
 
 
 def find_investment():
-    ic1 = float(input("Income1 or Earn1 :"))
+    ic1 = float(input("Income1 or Earn1 or obtain1 :"))
     iv1 = float(input("Investment1 or Stock1: "))
-    ic2 = float(input("Income2 or Earn2 : "))
+    ic2 = float(input("Income2 or Earn2 or obtain2 : "))
     iv2 = float((iv1 / ic1) * ic2)
     print("Investment2 or Stock2 :" + str(iv2))
-    # find_stockvalue()
+     # find_stockvalue()
 
 
 def find_dividend():
@@ -28,7 +28,7 @@ def find_dividend():
     inc2 = float((inc1 / i1) * i2)
     print("Income2 : " + str(inc2))
     print("Dividend :" + str(inc2) + "%")
-
+    # find_investment()
 
 def find_annualincome():
     ti = float(input("Total Investment : "))
@@ -38,7 +38,14 @@ def find_annualincome():
     ai = float(dvd * ((ti / inv1) * fc1))
     print("Annual_Income : " + str(ai))
 
-given_data = input("CP enter 1. or Sold_SV enter 2. or INV enter 3. or DVD enter 4. or A.I enter 5")
+ def find_income():
+     ivt1 = float(input("Investment1 :"))
+     incm1 = float(input("Income1: "))
+     ivt2 = float(input("Investment2 : "))
+     incm2 = float((incm1 / ivt1) * ivt2)
+     print("Investment2 or Stock2 :" + str(incm2))
+
+given_data = input("CP enter 1. or Sold_SV enter 2. or INV enter 3. or DVD enter 4. or A.I enter 5. or INC enter 6.")
 if given_data == '1':
  find_costprice()
 elif given_data == '2':
@@ -49,5 +56,7 @@ elif given_data == '4':
  find_dividend()
 elif given_data == '5':
  find_annualincome()
+elif given_data == '6':
+ find_income()
 else:
  print('enter a valid input')
