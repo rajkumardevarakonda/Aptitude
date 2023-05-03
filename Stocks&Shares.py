@@ -43,7 +43,7 @@ def find_annualincome():
      incm1 = float(input("Income1: "))
      ivt2 = float(input("Investment2 : "))
      incm2 = float((incm1 / ivt1) * ivt2)
-     print("Investment2 or Stock2 :" + str(incm2))
+     print("Income2 :" + str(incm2))
 
 given_data = input("CP enter 1. or Sold_SV enter 2. or INV enter 3. or DVD enter 4. or A.I enter 5. or INC enter 6.")
 if given_data == '1':
