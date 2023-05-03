@@ -28,3 +28,4 @@ if given_data =="3":
     x = (c/(a*b))**0.5
     y = Fraction(((a*x)+d)/((b*x)+d))
     print("Ratios of Ages : " + str(y))
+
