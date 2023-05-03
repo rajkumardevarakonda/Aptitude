@@ -1,4 +1,5 @@
-given_data = input("find X value of son age enter 1 or find Present Age Difference enter 2  ")
+from fractions import Fraction
+given_data = input("find SonAge(X) enter 1 or find Present Age Difference enter 2 or find Ratio of Ages enter 3 ")
 
 if given_data =="1":
     # Problem(22). Let son's age be X and i.e; mother's age is 2X
@@ -8,7 +9,7 @@ if given_data =="1":
     print(" Son's Age X : " + str(x))
 
 if given_data =="2":
-    #Problem(18).
+    # Problem(18).
     a = int(input("Numerator1 : "))
     b = int(input("Denominator1 : "))
     c = int(input("After How many Years : "))
@@ -18,3 +19,12 @@ if given_data =="2":
     y = int((a*x)-(b*x))
     print("Age Difference b/w Present Age : " + str(y))
 
+if given_data =="3":
+    # Problem35.
+    a = int(input("Numerator : "))
+    b = int(input("Denominator : "))
+    c = int(input("Product of their Ages : "))
+    d = int(input("Year' After ? : "))
+    x = (c/(a*b))**0.5
+    y = Fraction(((a*x)+d)/((b*x)+d))
+    print("Ratios of Ages : " + str(y))
