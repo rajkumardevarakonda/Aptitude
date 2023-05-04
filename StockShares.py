@@ -6,7 +6,7 @@ def find_numberofshares():
     nsv = float(ti / (inc + brok))
     print("Number of ShareValues : " + str(nsv))
 
-def find_TotalDebtre():
+def find_Total_investment_on_Debenture() :
     tin = float(input("Total Income : "))
     ei = float(input("each income on face value : "))
     x = float(input("cost of each debenture : "))
@@ -48,7 +48,11 @@ def find_better_investment_Stock():
     b = float(input("enter Market_value b1 : "))
     c = float(input("enter AnnualIncome on 1's share a2 : "))
     d = float(input("enter Market_value b2 : "))
-    x = (a*b*d)/b
+    t = float(input("tax : "))
+    if t==0:
+        x = (a * b * d) / b
+    else:
+        x = ((a * b * d) / b)*t
     print("X Annual_Income 1st Case : " + str(x))
     y = (c*b*d)/d
     print("Y Annual_Income 2nd Case : " + str(y))
@@ -57,12 +61,12 @@ def find_better_investment_Stock():
     else:
         print(str(c) + " Stock at " + str(d) + " is better")
 
-given_data = input("No of SV enter 1 or Total_Debenture enter 2 or Interest_on_faceValue enter 3 or Q.22&23 enter 4 "
-                   "or Q.26 enter a  : ")
+given_data = input("No of SV enter 1 or Total_Debenture enter 2 or Interest_on_faceValue enter 3 "
+                   " or Find_X_Part_in_total_Investment enter 4  or find which Stock is Better enter a : ")
 if  given_data == "1":
    find_numberofshares()
 elif given_data == "2":
-   find_TotalDebtre()
+   find_Total_investment_on_Debenture()
 elif given_data == "3":
    find_interest_obtained_on_FaceValue()
 elif given_data == "4":
