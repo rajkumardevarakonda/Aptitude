@@ -29,13 +29,45 @@ def find_interest_obtained_on_FaceValue():
     interestObtained = float(dvd*100)/invt
     print("Interest Obtained :" + str(interestObtained) + "%")
 
+def find_part_Of_Amount_In_Total_Investment():
+    a = float(input("1st dividend part on market Value by 1st investment : "))
+    b = float(input("first Market Value : "))
+    c = float(input("2st dividend part on market Value by 2nd investment : "))
+    d = float(input("Second Market Value : "))
+    e = float(input("Total Investment : "))
+    f = float(input("Total Income or Dividend (enter 0 to skip): "))
+    if f!=0:
+        x = ((b * d * f) - (c * b * e)) / ((a * d) - (c * b))
+        print("1stPart invested on total Amount : " + str(x))
+    else:
+        y = (c * e * b * d) / ((d * a * d) + (d * c * b))
+        print("1stPart invested on total Amount : " + str(y))
 
-given_data = input("No of SV enter 1 or Total_Debenture enter 2 or Interest_on_faceValue enter 3 : ")
+def find_better_investment_Stock():
+    a = float(input("enter AnnualIncome on 1's share a1 : "))
+    b = float(input("enter Market_value b1 : "))
+    c = float(input("enter AnnualIncome on 1's share a2 : "))
+    d = float(input("enter Market_value b2 : "))
+    x = (a*b*d)/b
+    print("X Annual_Income 1st Case : " + str(x))
+    y = (c*b*d)/d
+    print("Y Annual_Income 2nd Case : " + str(y))
+    if x>y:
+        print(str(a) + " Stock at " + str(b) + " is better")
+    else:
+        print(str(c) + " Stock at " + str(d) + " is better")
+
+given_data = input("No of SV enter 1 or Total_Debenture enter 2 or Interest_on_faceValue enter 3 or Q.22&23 enter 4 "
+                   "or Q.26 enter a  : ")
 if  given_data == "1":
    find_numberofshares()
 elif given_data == "2":
    find_TotalDebtre()
 elif given_data == "3":
    find_interest_obtained_on_FaceValue()
+elif given_data == "4":
+    find_part_Of_Amount_In_Total_Investment()
+elif given_data == "a":
+    find_better_investment_Stock()
 else:
    print('enter a valid input')
