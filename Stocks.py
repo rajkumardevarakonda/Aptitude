@@ -1,5 +1,8 @@
+from fractions import Fraction
+
 given_data = input("find Loss or gain on amount invested in bank & Stock enter 1 : "
-                   "or find Q.24 enter 2 or find Q.25 enter 3 or find change in Income enter 4 : ")
+                   "or find Q.24 enter 2 or find Q.25 enter 3 or find change in Income enter 4 : or "
+                   "find change in income on service charge enter 5 ")
 
 if  given_data == "1":
     ti = float(input("Total Investment : "))
@@ -30,15 +33,15 @@ if  given_data == "2":
     print("Maximum Return : " + str(total))
 
 if  given_data == "3":
-    a = int(input('total amount of a = '))
-    b = int(input('percentage on bond a = '))
-    c = int(input('total amount of b = '))
-    d = int(input('percentage on bond b = '))
-    x = a / b
+    a = Fraction(input('Stock value a = '))
+    b = Fraction(input('Dividend % a = '))
+    c = Fraction(input('Stock Value b = '))
+    d = Fraction(input('Dividend % b = '))
+    x = (a / b)
     y = c / d
-    # z = x / y
-    print(x,y)
-    # print(Fraction(z))
+    z = x / y
+    print("Ratios of Investments : "+ str(z))
+
 
 if  given_data == "4":
     a = float(input("1st Investment : "))
@@ -49,5 +52,21 @@ if  given_data == "4":
     f = float(input("Dividend % of One New Stock Value : "))
     x = (c*(a/b))
     y = (f*d*(a/b))/e
+    D = (y-x)
+    print("change in Income : " + str(D))
+
+if  given_data == "5":
+    a = float(input("total Shares sold at : "))
+    b = float(input("Dividend % on one Share of  : "))
+    c = float(input("one Share Value of 1st Investment : "))
+    d = float(input("Dividend % on one New Stock Value: "))
+    e = float(input("one Share Value of 2nd Investment: "))
+    f = float(input("Service Charges % of Face value: "))
+    # face Value = 100
+    g = a/100  # no. of shares sold
+    h = (c-f)*g
+    i = (h)/(e+f) # no. of new shares that invested in
+    x = (a * b) / 100
+    y = (d*i)
     D = (y-x)
     print("change in Income : " + str(D))
