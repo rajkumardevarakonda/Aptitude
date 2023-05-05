@@ -46,7 +46,8 @@ def find_income():
     income2 = float((income1 / ivt1) * ivt2)
     print("Income2 :" + str(income2))
 
-given_data = input("CP enter 1. or Sold_SV enter 2. or INV enter 3. or DVD enter 4. or A.I enter 5. or INC enter 6.")
+given_data = input("CostPrice enter 1. or Sold_SV enter 2. or INV enter 3. or DVD enter 4. or A.I enter 5."
+                   " or INC enter 6.")
 if given_data == '1':
   find_cost_price()
 elif given_data == '2':
