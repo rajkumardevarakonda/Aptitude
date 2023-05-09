@@ -1,50 +1,50 @@
 from fractions import Fraction
 def find_cost_price():
-    fv = float(input("Enter the FaceValue : "))
-    dis = float(input("Enter the Discount : "))
-    brok= float(input("Enter the Brokerage : "))
-    cp = float(fv - dis + brok)
-    print("costPrice : " + str(cp))
+    faceValue = float(input("Enter the FaceValue : "))
+    discount = float(input("Enter the Discount : "))
+    brokerage= float(input("Enter the Brokerage : "))
+    Cost_Price = float(faceValue - discount + brokerage)
+    print("costPrice : " + str(Cost_Price))
 
 
 def find_stock_value():
-    sp = float(input("Enter the SellingPrice : "))
-    brok = float(input("Enter the Brokerage : "))
-    sv = float(sp - brok)
-    print("stockValue : " + str(sv))
+    Selling_Price = float(input("Enter the SellingPrice : "))
+    brokerage = float(input("Enter the Brokerage : "))
+    Share_Value = float(Selling_Price - brokerage)
+    print("stockValue : " + str(Share_Value))
 
 
 def find_investment():
-    ic1 = float(input("Income1 or Earn1 or obtain1 :"))
-    iv1 = float(input("Investment1 or Stock1: "))
-    ic2 = float(input("Income2 or Earn2 or obtain2 : "))
-    iv2 = float((iv1 / ic1) * ic2)
-    print("Investment2 or Stock2 :" + str(iv2))
+    Income1 = float(input("Income1 or Earn1 or obtain1 :"))
+    Investment1 = float(input("Investment1 or Stock1: "))
+    Income2 = float(input("Income2 or Earn2 or obtain2 : "))
+    Investment2 = float((Investment1 / Income1) * Income2)
+    print("Investment2 or Stock2 :" + str(Investment2))
 
 
 def find_dividend():
-    i1 = float(input("Investment1 : "))
-    inc1 = float(input("Income1 : "))
-    i2 = float(input("Investment2 : "))
-    inc2 = float((inc1 / i1) * i2)
-    print("Income2 : " + str(inc2))
-    print("Dividend :" + str(inc2) + "%")
+    investment1 = float(input("Investment1 : "))
+    income1 = float(input("Income1 : "))
+    investment2 = float(input("Investment2 : "))
+    income2 = float((income1 / investment1) * investment2)
+    print("Income2 : " + str(income2))
+    print("Dividend :" + str(income2) + "%")
 
 
 def find_annual_income():
-    ti = float(input("Total Investment : "))
-    inv1 = float(input("Investment in 1'share : "))
-    fc1 = float(input("FaceValue of 1'Share : "))
-    dvd = float(input("Dividend : "))
-    ai = float((dvd /100 ) * ((ti / inv1) * fc1))
-    print("Annual_Income : " + str(ai))
+    total_investment = float(input("Total Investment : "))
+    investment_in_one_Share = float(input("Investment in 1'share : "))
+    Face_Value_of_One_Share = float(input("FaceValue of 1'Share : "))
+    dividend = float(input("Dividend : "))
+    Annual_Income = float((dividend /100 ) * ((total_investment / investment_in_one_Share) * Face_Value_of_One_Share))
+    print("Annual_Income : " + str(Annual_Income))
 
 
 def find_income():
-    ivt1 = float(input("Investment1 :"))
+    investment1 = float(input("Investment1 :"))
     income1 = float(input("Income1: "))
-    ivt2 = float(input("Investment2 : "))
-    income2 = float((income1 / ivt1) * ivt2)
+    investment2 = float(input("Investment2 : "))
+    income2 = float((income1 / investment1) * investment2)
     print("Income2 :" + str(income2))
 
 
@@ -112,25 +112,25 @@ def find_better_investment_Stock():
 
 
 def find_Loss_or_gain_on_amount_invested_in_bank_and_Stock():
-    ti = float(input("Total Investment : "))
-    inrt = float(input("interest on investment by bank : "))
-    fv = float(input("Face Value : "))
-    invt = float(input("Cost of Each Share : "))
-    dvd = float(input("Dividend % on Face Value : "))
-    x = float((ti*inrt)/100)
-    y = float(((dvd * fv) / 100) * (ti / invt))
+    total_investment = float(input("Total Investment : "))
+    Bank_interest = float(input("interest on investment by bank : "))
+    face_value = float(input("Face Value : "))
+    One_Share_value = float(input("Cost of Each Share : "))
+    dividend = float(input("Dividend % on Face Value : "))
+    x = float((total_investment*Bank_interest)/100)
+    y = float(((dividend * face_value) / 100) * (total_investment / One_Share_value))
     print("Bank Income : " + str(x))
     print("Total Income on Stock : " + str(y))
     if x>y:
-        D = float(x-y)
-        print("LOSS : " + str(D))
+        Difference_in_Income = float(x-y)
+        print("LOSS : " + str(Difference_in_Income))
     else:
-        D = float(y-x)
-        print("Gain : " + str(D))
+        Difference_in_Income = float(y-x)
+        print("Gain : " + str(Difference_in_Income))
 
 def find_Maximum_Return():
     a = int(input('total investment = '))
-    b = int(input('max percentage on bond b = '))
+    b = int(input('maximum percentage on bond b = '))
     x = 100 * a / (b + 100)
     y = a - x
     print((x, y))
