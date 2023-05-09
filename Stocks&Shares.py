@@ -128,7 +128,7 @@ def find_Loss_or_gain_on_amount_invested_in_bank_and_Stock():
         D = float(y-x)
         print("Gain : " + str(D))
 
-def find_q24():
+def find_Maximum_Return():
     a = int(input('total investment = '))
     b = int(input('max percentage on bond b = '))
     x = 100 * a / (b + 100)
@@ -139,7 +139,7 @@ def find_q24():
     total = (c * x / 100) + (d * y / 100)
     print("Maximum Return : " + str(total))
 
-def find_q25():
+def find_Ratios_of_Investments():
     a = Fraction(input('Stock value a = '))
     b = Fraction(input('Dividend % a = '))
     c = Fraction(input('Stock Value b = '))
@@ -211,9 +211,9 @@ elif given_data == "11":
 elif given_data == "12":
  find_Loss_or_gain_on_amount_invested_in_bank_and_Stock()
 elif given_data == "13":
- find_q24()
+ find_Maximum_Return()
 elif given_data == "14":
- find_q25()
+ find_Ratios_of_Investments()
 elif given_data == "15":
  find_change_in_Income()
 elif given_data == "16":
