@@ -185,7 +185,7 @@ given_data = input("   CostPrice enter 1 \nor Sold_ShareValue enter 2 \nor Inves
                    "or Find_X_Part_in_total_Investment enter 10 \nor find which Stock is Better enter 11 \nor "
                    "find Loss or gain on amount invested in bank & Stock enter 12 : \n"
                    "or find Q.24 enter 13 \nor find Q.25 enter 14 \nor find change in Income enter 15 : \nor "
-                   "find change in income on service charge enter 16 \n = ")
+                   "find change in income on service charge enter 16 \n  = ")
 if given_data == '1':
   find_cost_price()
 elif given_data == '2':
