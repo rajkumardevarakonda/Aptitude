@@ -1,3 +1,5 @@
+
+
 from fractions import Fraction
 def find_cost_price():
     faceValue = float(input("Enter the FaceValue : "))
